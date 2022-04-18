@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS todopulpodb;
+
+USE todopulpodb;
+
+CREATE TABLE tRestaurante(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    direccion VARCHAR(255),
+    provincia VARCHAR(50)
+);
+
+CREATE TABLE tUsuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL    
+);
+
+CREATE TABLE tValoracion(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    idrestaurante INT NOT NULL,
+    idusuario INT NOT NULL,
+    nota DECIMAL(1,1) NOT NULL,
+    comentario VARCHAR(500),
+    FOREIGN KEY (idrestaurante) REFERENCES tRestaurante (id),
+    FOREIGN KEY (idusuario) REFERENCES tUsuario (id)
+);
