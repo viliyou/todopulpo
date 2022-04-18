@@ -1,0 +1,30 @@
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('A Nova Lanchiña', 'Calle Eusebio da guarda, 1', 'A Coruña');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpeira O fiuza', 'avenida navarra, 33 ', 'A Coruña');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpeira de Melide', 'plaza de España, 16 ', 'A Coruña');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpería de Arzúa', 'calle Francisco Catoira, 8', 'A Coruña');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpería Abastos', 'nave n5 local 107, rúa das Ameas ', 'Santiago de Compostela');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpería O Piorno', 'Rúa do Franco, 24', 'Santiago de Compostela');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('A Casa do Pulpo', 'Calle Juan de Austria, 15 ', 'Ourense');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Taberna Pulpería Ataranza', 'Rúa dos Fornos, 11', 'Ourense');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpería Catro Rúas', 'Rúa do Camiño Real, 152', 'Lugo');
+
+INSERT INTO tRestaurante (nombre, direccion, provincia)
+VALUES ('Pulpería O Xugo', 'Avenida del Dr. García Portela, 15', 'Lugo');
