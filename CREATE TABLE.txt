@@ -20,7 +20,7 @@ CREATE TABLE tValoracion(
     id INT PRIMARY KEY AUTO_INCREMENT,
     idrestaurante INT NOT NULL,
     idusuario INT NOT NULL,
-    nota DECIMAL(1,1) NOT NULL,
+    nota DECIMAL(2,1) NOT NULL,
     comentario VARCHAR(500),
     FOREIGN KEY (idrestaurante) REFERENCES tRestaurante (id),
     FOREIGN KEY (idusuario) REFERENCES tUsuario (id)
