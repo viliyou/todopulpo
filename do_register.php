@@ -1,5 +1,5 @@
 <?php
-$db = mysqli_connect('localhost', 'root', '1234', 'todopulpo') or die('Fail');
+$db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
 $name_posted = $_POST['f_name'];
 $email_posted = $_POST['f_email'];
 $password_posted = $_POST['f_password'];
