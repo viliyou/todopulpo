@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 'On');
 require __DIR__ . '../db_connection.php';
-$mysqli = get_db_connection_or_die();
+$db = get_db_connection_or_die();
 
 $name_posted = $_POST['f_name'];
 $email_posted = $_POST['f_email'];
