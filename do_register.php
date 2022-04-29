@@ -13,8 +13,8 @@ echo '<p>Introduce la misma contraseña en los dos campos</p>';
 echo '<p><a href='register.php'>Volver a intentarlo</a></p>';
 } else {
 $password_posted = password_hash($password_posted, PASSWORD_DEFAULT);
-$query = "INSERT INTO usuario(id_usuario,nombre, email, password)
-VALUES ('".$nombre_posted."',".$email_posted.",NULL)";
+$query = "INSERT INTO tUsuario(id,nombre, email, password)
+VALUES ('".$name_posted."',".$email_posted.",NULL)";
 mysqli_query($db, $query) or die('Error');
 echo '<p>Usuario registrado</p>';
 echo '<p><a href="login.html">Loguearse</p>';
