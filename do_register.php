@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 'On');
-require __DIR__ . 'db_connection.php';
+require __DIR__ . '/home/vili/todopulpo/todopulpo/db_connection.php';
 $db = get_db_connection_or_die();
 
 $name_posted = $_POST['f_name'];
