@@ -16,7 +16,7 @@ $only_row = mysqli_fetch_array($result);
   
   echo($password_posted);
   
-if ($only_row[1] == $password_posted) {
+if (password_verify($password_posted, $only_row[1])) {
   
   echo("fallo vaina linea 17");
 session_start();  
