@@ -12,7 +12,7 @@ $only_row = mysqli_fetch_array($result);
   
   echo("fallo vaina linea 13");
   
-  echo($only_row);
+  echo($only_row[1]);
   
   echo($password_posted);
   
