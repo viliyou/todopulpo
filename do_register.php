@@ -24,7 +24,6 @@ echo ("cualquier vaina");
 $password_posted = password_hash($password_posted, PASSWORD_DEFAULT);
 $query = "INSERT INTO tUsuario(nombre, email, password) VALUES (".$name_posted.",".$email_posted.",".$password_posted.")";
 mysqli_query($db, $query) or die('Error');
-echo '<p>Usuario registrado</p>';
-echo '<p><a href="login.php">Loguearse</p>';
+
 }
 ?>
