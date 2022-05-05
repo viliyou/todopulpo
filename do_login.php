@@ -12,6 +12,10 @@ $only_row = mysqli_fetch_array($result);
   
   echo("fallo vaina linea 13");
   
+  echo($only_row);
+  
+  echo($password_posted);
+  
 if ($only_row[1] == $password_posted) {
   
   echo("fallo vaina linea 17");
