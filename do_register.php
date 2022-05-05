@@ -1,7 +1,9 @@
 <?php
-ini_set('display_errors', 'On');
-require __DIR__ . '/home/vili/todopulpo/todopulpo/db_connection.php';
-$db = get_db_connection_or_die();
+//ini_set('display_errors', 'On');
+//require __DIR__ . 'db_connection.php';
+//$db = get_db_connection_or_die();
+
+$db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
 
 $name_posted = $_POST['f_name'];
 $email_posted = $_POST['f_email'];
