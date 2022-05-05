@@ -2,7 +2,7 @@
 $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
 $email_posted = $_POST['f_email'];
 $password_posted = $_POST['f_password'];
-$query = "SELECT id, password FROM usuario WHERE email = '".$email_posted."'";
+$query = "SELECT id, password FROM tUsuario WHERE email = '".$email_posted."'";
 $result = mysqli_query($db, $query) or die('Query error');
 if (mysqli_num_rows($result) > 0) {
 $only_row = mysqli_fetch_array($result);
