@@ -30,4 +30,7 @@ mysqli_query($db, $query) or die('Error');
 //echo '<p>Usuario registrado</p>';
 //echo '<p><a href="login.php">Loguearse</p>';
 }
+
+header("Location: login.php");
+
 ?>
