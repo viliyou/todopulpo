@@ -29,6 +29,6 @@ echo '<p>Contraseña incorrecta</p>';
 }
 } else {
 echo '<p>Usuario no encontrado con ese email</p>';
-echo '<p><a href="login.php">Volver a intentarlo</a></p>'
+//echo '<p><a href="login.php">Volver a intentarlo</a></p>'
 }
 ?>
