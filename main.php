@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -39,23 +38,24 @@
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
     $query = "SELECT id, password FROM tUsuario WHERE email = '".$email_posted."'";
-$result = mysqli_query($db, $query) or die('Query error');
+    $result = mysqli_query($db, $query) or die('Query error');
 
 
-$query = "SELECT nombre, provincia, direccion FROM tRestaurante";
+    $query = "SELECT nombre, provincia, direccion FROM tRestaurante";
 
-while ($registro = mysqli_fetch_array($result)){
-echo "
-<tr>
-<td width='150'>".$registro['nombre']."</td>
-<td width='150'>".$registro['direccion']."</td>
-<td width='150'>".$registro['provincia']."</td>
-<td width='150'></td>
+    while ($registro = mysqli_fetch_array($result)){
+    echo "
+    <tr>
+    <td width='150'>".$registro['nombre']."</td>
+    <td width='150'>".$registro['direccion']."</td>
+    <td width='150'>".$registro['provincia']."</td>
+    <td width='150'></td>
 
-</tr>
+    </tr>
 ";
 }
 
+    mysqli_close($db);
 ?>
 </table>
 </div>
