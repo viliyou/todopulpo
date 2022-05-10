@@ -36,13 +36,13 @@
 <td width='150' style='font-weight: bold'>PROVINCIA</td>
 </tr>
 <?php
-mysql_connect("localhost","root","todopulpodb");
-mysql_select_db("todopulpodb");
+mysqli_connect("localhost","root","1234","todopulpodb");
+mysqli_select_db("todopulpodb");
 
 $query = "select * from tRestaurante"; // Esta linea hace la consulta
-$result = mysql_query($query);
+$result = mysqli_query($query);
 
-while ($registro = mysql_fetch_array($result)){
+while ($registro = mysqli_fetch_array($result)){
 echo "
 <tr>
 <td width='150'>".$registro['nombre']."</td>
