@@ -33,15 +33,18 @@
         <tr>
             <td width='150' style='font-weight: bold'>NOMBRE</td>
             <td width='250' style='font-weight: bold'>DIRECCIÓN</td>
-            <td width='150' style='font-weight: bold'>PROVINCIA</td>    
+            <td width='150' style='font-weight: bold'>PROVINCIA</td>  
+            <td width='20' style='font-weight: bold'>VALORACIÓN</td>    
+            <td width='200' style='font-weight: bold'>COMENTARIO</td>    
         </tr>
             
 <?php
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
-    $query = "SELECT nombre,direccion,provincia FROM tRestaurante";
+    $query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante,tValoracion";
+   
     $result = mysqli_query($db, $query) or die('Query error');
-
+  
 
     
 
@@ -51,6 +54,10 @@
         <td width='150'>".$registro['nombre']."</td>
         <td width='250'>".$registro['direccion']."</td>
         <td width='150'>".$registro['provincia']."</td>
+        
+        <td width='20'>".$registro['nota']."</td>
+        <td width='200'>".$registro['valoracion']."</td>
+        
         </tr>
         ";
        }
