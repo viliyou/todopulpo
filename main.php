@@ -36,11 +36,13 @@
 <td width='150' style='font-weight: bold'>PROVINCIA</td>
 </tr>
 <?php
-mysqli_connect("localhost","root","1234","todopulpodb");
-mysqli_select_db("todopulpodb");
 
-$query = "select * from tRestaurante"; // Esta linea hace la consulta
-$result = mysqli_query($query);
+    $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
+    $query = "SELECT id, password FROM tUsuario WHERE email = '".$email_posted."'";
+$result = mysqli_query($db, $query) or die('Query error');
+
+
+$query = "SELECT nombre, provincia, direccion FROM tRestaurante";
 
 while ($registro = mysqli_fetch_array($result)){
 echo "
