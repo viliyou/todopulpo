@@ -37,11 +37,11 @@
 <?php
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
-    $query = "SELECT id, password FROM tUsuario WHERE email = '".$email_posted."'";
+    $query = "SELECT nombre,direccion,provincia FROM tRestaurante";
     $result = mysqli_query($db, $query) or die('Query error');
 
 
-    $query = "SELECT nombre, provincia, direccion FROM tRestaurante";
+    
 
     while ($registro = mysqli_fetch_array($result)){
     echo "
