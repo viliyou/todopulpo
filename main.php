@@ -27,13 +27,15 @@
            }
      ?>        
         
-        <div class="restaurantes" align='center'>
-<table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
-<tr>
-<td width='150' style='font-weight: bold'>NOMBRE</td>
-<td width='250' style='font-weight: bold'>DIRECCIÓN</td>
-<td width='150' style='font-weight: bold'>PROVINCIA</td>
-</tr>
+     <div class="restaurantes" align='center'>
+        <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
+    
+        <tr>
+            <td width='150' style='font-weight: bold'>NOMBRE</td>
+            <td width='250' style='font-weight: bold'>DIRECCIÓN</td>
+            <td width='150' style='font-weight: bold'>PROVINCIA</td>    
+        </tr>
+            
 <?php
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
@@ -45,23 +47,18 @@
 
     while ($registro = mysqli_fetch_array($result)){
     echo "
-    <tr>
-    <td width='150'>".$registro['nombre']."</td>
-    <td width='150'>".$registro['direccion']."</td>
-    <td width='150'>".$registro['provincia']."</td>
-    <td width='150'></td>
-
-    </tr>
-";
-}
+        <tr>
+        <td width='150'>".$registro['nombre']."</td>
+        <td width='250'>".$registro['direccion']."</td>
+        <td width='150'>".$registro['provincia']."</td>
+        </tr>
+        ";
+       }
 
     mysqli_close($db);
 ?>
-</table>
-</div>
-        
-        
-        
+        </table>
+      </div>
         
     </body>
 </html>
