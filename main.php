@@ -8,7 +8,9 @@
         <title>Document</title>
     </head>    
     <body> 
+        
     <h1>Página principal</h1>
+        
     <?php        
     session_start();        
     if (empty($_SESSION['user_id'])) {         
@@ -25,5 +27,40 @@
      <?php
            }
      ?>        
+        
+        <div class="restaurantes" align='center'>
+<table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
+<tr>
+<td width='150' style='font-weight: bold'>NOMBRE</td>
+<td width='250' style='font-weight: bold'>DIRECCIÓN</td>
+<td width='150' style='font-weight: bold'>PROVINCIA</td>
+</tr>
+<?php
+mysql_connect("localhost","root","todopulpodb");
+mysql_select_db("todopulpodb");
+
+$query = "select * from tRestaurante"; // Esta linea hace la consulta
+$result = mysql_query($query);
+
+while ($registro = mysql_fetch_array($result)){
+echo "
+<tr>
+<td width='150'>".$registro['nombre']."</td>
+<td width='150'>".$registro['direccion']."</td>
+<td width='150'>".$registro['provincia']."</td>
+<td width='150'></td>
+
+</tr>
+";
+}
+
+?>
+</table>
+</div>
+        
+        
+        
+        
     </body>
 </html>
+
