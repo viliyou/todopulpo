@@ -31,11 +31,11 @@
         <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
     
         <tr>
-            <td width='500' style='font-weight: bold'>NOMBRE</td>
-            <td width='500' style='font-weight: bold'>DIRECCIÓN</td>
+            <td width='700' style='font-weight: bold'>NOMBRE</td>
+            <td width='700' style='font-weight: bold'>DIRECCIÓN</td>
             <td width='150' style='font-weight: bold'>PROVINCIA</td>  
             <td width='20' style='font-weight: bold'>NOTA</td>    
-            <td width='400' style='font-weight: bold'>COMENTARIO</td>    
+            <td width='700' style='font-weight: bold'>COMENTARIO</td>    
         </tr>
             
 <?php
@@ -51,12 +51,12 @@
     while ($registro = mysqli_fetch_array($result)){
     echo "
         <tr>
-        <td width='500'>".$registro['nombre']."</td>
-        <td width='500'>".$registro['direccion']."</td>
+        <td width='700'>".$registro['nombre']."</td>
+        <td width='700'>".$registro['direccion']."</td>
         <td width='150'>".$registro['provincia']."</td>
         
         <td width='20'>".$registro['nota']."</td>
-        <td width='400'>".$registro['comentario']."</td>
+        <td width='700'>".$registro['comentario']."</td>
         
         </tr>
         ";
