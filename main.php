@@ -28,7 +28,7 @@
      ?>        
         
      <div class="restaurantes" align='center'>
-        <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
+        <table border='1' cellpadding='0' cellspacing='0' width='800' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
     
         <tr>
             <td width='700' style='font-weight: bold'>NOMBRE</td>
