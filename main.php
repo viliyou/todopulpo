@@ -34,8 +34,8 @@
             <td width='150' style='font-weight: bold'>NOMBRE</td>
             <td width='250' style='font-weight: bold'>DIRECCIÓN</td>
             <td width='150' style='font-weight: bold'>PROVINCIA</td>  
-            <td width='20' style='font-weight: bold'>VALORACIÓN</td>    
-            <td width='200' style='font-weight: bold'>COMENTARIO</td>    
+            <td width='20' style='font-weight: bold'>NOTA</td>    
+            <td width='400' style='font-weight: bold'>COMENTARIO</td>    
         </tr>
             
 <?php
