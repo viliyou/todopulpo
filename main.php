@@ -32,7 +32,7 @@
     
         <tr>
             <td width='300' style='font-weight: bold'>NOMBRE</td>
-            <td width='700' style='font-weight: bold'>DIRECCIÓN</td>
+            <td width='400' style='font-weight: bold'>DIRECCIÓN</td>
             <td width='200' style='font-weight: bold'>PROVINCIA</td>  
             <td width='20' style='font-weight: bold'>NOTA</td>    
             <td width='700' style='font-weight: bold'>COMENTARIO</td>    
@@ -52,7 +52,7 @@
     echo "
         <tr>
         <td width='300'>".$registro['nombre']."</td>
-        <td width='700'>".$registro['direccion']."</td>
+        <td width='400'>".$registro['direccion']."</td>
         <td width='200'>".$registro['provincia']."</td>
         
         <td width='20'>".$registro['nota']."</td>
