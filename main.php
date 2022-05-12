@@ -31,8 +31,8 @@
         <table border='1' cellpadding='0' cellspacing='0' width='600' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
     
         <tr>
-            <td width='250' style='font-weight: bold'>NOMBRE</td>
-            <td width='300' style='font-weight: bold'>DIRECCIÓN</td>
+            <td width='500' style='font-weight: bold'>NOMBRE</td>
+            <td width='500' style='font-weight: bold'>DIRECCIÓN</td>
             <td width='150' style='font-weight: bold'>PROVINCIA</td>  
             <td width='20' style='font-weight: bold'>NOTA</td>    
             <td width='400' style='font-weight: bold'>COMENTARIO</td>    
@@ -51,8 +51,8 @@
     while ($registro = mysqli_fetch_array($result)){
     echo "
         <tr>
-        <td width='250'>".$registro['nombre']."</td>
-        <td width='300'>".$registro['direccion']."</td>
+        <td width='500'>".$registro['nombre']."</td>
+        <td width='500'>".$registro['direccion']."</td>
         <td width='150'>".$registro['provincia']."</td>
         
         <td width='20'>".$registro['nota']."</td>
