@@ -28,10 +28,10 @@
      ?>        
         
      <div class="restaurantes" align='center'>
-        <table border='1' cellpadding='0' cellspacing='0' width='1000' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
+        <table border='1' cellpadding='0' cellspacing='0' width='1200' bgcolor='#F6F6F6' bordercolor='#FFFFFF'>
     
         <tr>
-            <td width='700' style='font-weight: bold'>NOMBRE</td>
+            <td width='300' style='font-weight: bold'>NOMBRE</td>
             <td width='700' style='font-weight: bold'>DIRECCIÓN</td>
             <td width='200' style='font-weight: bold'>PROVINCIA</td>  
             <td width='20' style='font-weight: bold'>NOTA</td>    
@@ -51,7 +51,7 @@
     while ($registro = mysqli_fetch_array($result)){
     echo "
         <tr>
-        <td width='700'>".$registro['nombre']."</td>
+        <td width='300'>".$registro['nombre']."</td>
         <td width='700'>".$registro['direccion']."</td>
         <td width='200'>".$registro['provincia']."</td>
         
