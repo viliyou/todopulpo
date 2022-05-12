@@ -56,7 +56,6 @@
         <td width='150'>".$registro['provincia']."</td>
         
         <td width='20'>".$registro['nota']."</td>
-        <td width='200'>".$registro['valoracion']."</td>
         <td width='200'>".$registro['comentario']."</td>
         
         </tr>
