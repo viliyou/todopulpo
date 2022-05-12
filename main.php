@@ -33,7 +33,7 @@
         <tr>
             <td width='700' style='font-weight: bold'>NOMBRE</td>
             <td width='700' style='font-weight: bold'>DIRECCIÓN</td>
-            <td width='150' style='font-weight: bold'>PROVINCIA</td>  
+            <td width='200' style='font-weight: bold'>PROVINCIA</td>  
             <td width='20' style='font-weight: bold'>NOTA</td>    
             <td width='700' style='font-weight: bold'>COMENTARIO</td>    
         </tr>
@@ -53,7 +53,7 @@
         <tr>
         <td width='700'>".$registro['nombre']."</td>
         <td width='700'>".$registro['direccion']."</td>
-        <td width='150'>".$registro['provincia']."</td>
+        <td width='200'>".$registro['provincia']."</td>
         
         <td width='20'>".$registro['nota']."</td>
         <td width='700'>".$registro['comentario']."</td>
