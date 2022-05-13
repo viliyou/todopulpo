@@ -44,6 +44,17 @@
     $query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
     $result = mysqli_query($db, $query) or die('Query error');
+    $results = mysli_num_rows($result);
+           if ($results>0){
+               while($row_searched= mysqli_fetch_array($result)){
+                   echo'<div>';
+                   echo'<p></p>';
+                   echo'<p>'.$row_searched['comentario'].'</p>';
+                   echo '</div>';
+               }
+           }else{
+               echo '<p></p>';
+           }
   
 
     
@@ -69,4 +80,3 @@
         
     </body>
 </html>
-
