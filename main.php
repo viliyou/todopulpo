@@ -41,15 +41,28 @@
 <?php
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
-    $query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
+
+
+
+    //$query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
-    $result = mysqli_query($db, $query) or die('Query error');
-    $results = mysli_num_rows($result);
+    $busqueda1 = "SELECT nombre,direccion,provincia FROM tRestaurante";
+    $busqueda2 = "SELECT nota,comentario FROM tValoracion";
+
+
+    //$notamedia = ""
+
+    $result = mysqli_query($db, $busqueda1) or die('Query error');
+    $result2 = mysqli_query($db, $busqueda2) or die('Query error');
+
+    $results = mysqli_num_rows($result);
+
            if ($results>0){
                while($row_searched= mysqli_fetch_array($result)){
                    echo'<div>';
                    echo'<p></p>';
-                   echo'<p>'.$row_searched['comentario'].'</p>';
+
+                  // echo'<p>'.$row_searched['comentario'].'</p>';
                    echo '</div>';
                }
            }else{
@@ -60,17 +73,38 @@
     
 
     while ($registro = mysqli_fetch_array($result)){
-    echo "
-        <tr>
-        <td width='300'>".$registro['nombre']."</td>
-        <td width='400'>".$registro['direccion']."</td>
-        <td width='200'>".$registro['provincia']."</td>
+
+   
         
-        <td width='20'>".$registro['nota']."</td>
-        <td width='700'>".$registro['comentario']."</td>
+
+        while($registro2 = mysqli_fetch_array($result2)){
+
+            $notamedia = $notamedia + $registro2[0];
+            $comentario = $comentario + "/n" + $registro2[1];
+          
+        }
+
+
+        $notamedia = $notamedia/mysqli_num_rows($result2);
+
+        echo "   <tr> ";
+        echo "   <td width='300'>".$registro['nombre']."</td>";
+        echo "   <td width='400'>".$registro['direccion']."</td>";
+        echo "   <td width='200'>".$registro['provincia']."</td>";
+        echo "   <td width='400'>".$notamedia."</td>";
+        echo "   <td width='200'>".$comentario."</td>";
         
-        </tr>
-        ";
+
+        echo "   </tr>";      
+
+        
+
+        
+
+
+
+
+
        }
 
     mysqli_close($db);
@@ -80,3 +114,5 @@
         
     </body>
 </html>
+
+   
