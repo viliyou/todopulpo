@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -47,34 +48,30 @@
     //$query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
     $busqueda1 = "SELECT nombre,direccion,provincia FROM tRestaurante";
-    $busqueda2 = "SELECT nota,comentario FROM tValoracion";
+    
 
 
     //$notamedia = ""
 
     $result = mysqli_query($db, $busqueda1) or die('Query error');
-    $result2 = mysqli_query($db, $busqueda2) or die('Query error');
+   
 
     $results = mysqli_num_rows($result);
 
-           if ($results>0){
-               while($row_searched= mysqli_fetch_array($result)){
-                   echo'<div>';
-                   echo'<p></p>';
-
-                  // echo'<p>'.$row_searched['comentario'].'</p>';
-                   echo '</div>';
-               }
-           }else{
-               echo '<p></p>';
-           }
+           if ($results>0){         
+           
+        
+        
+       
   
 
     
 
     while ($registro = mysqli_fetch_array($result)){
 
-   
+        $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE id=".$registro.[0] ;
+
+        $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');
         
 
         while($registro2 = mysqli_fetch_array($result2)){
@@ -95,7 +92,10 @@
         echo "   <td width='200'>".$comentario."</td>";
         
 
-        echo "   </tr>";      
+        echo "   </tr>";
+
+
+      }
 
         
 
@@ -115,4 +115,5 @@
     </body>
 </html>
 
+   
    
