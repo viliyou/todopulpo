@@ -47,7 +47,7 @@
 
     //$query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
-    $busqueda1 = "SELECT nombre,direccion,provincia FROM tRestaurante";
+    $busqueda1 = "SELECT id,nombre,direccion,provincia FROM tRestaurante";
     
 
 
