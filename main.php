@@ -69,7 +69,7 @@
 
     while ($registro = mysqli_fetch_array($result)){
 
-        $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE id=".$registro['id']."'" ;
+        $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE id=".$registro['id'] ;
 
         $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');
         
