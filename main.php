@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -48,8 +47,6 @@
     //$query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
     $busqueda1 = "SELECT id,nombre,direccion,provincia FROM tRestaurante";
-    
-
 
     //$notamedia = ""
 
@@ -59,20 +56,12 @@
     $results = mysqli_num_rows($result);
 
            if ($results>0){         
-           
-        
-        
-       
-  
-
-    
 
     while ($registro = mysqli_fetch_array($result)){
 
         $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE idrestaurante=".$registro['id'] ;
-        echo ($busqueda2);
-        $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');
-        
+        // echo ($busqueda2);
+        $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
 
         while($registro2 = mysqli_fetch_array($result2)){
 
@@ -80,7 +69,6 @@
             $comentario = $comentario + "/n" + $registro2[1];
           
         }
-
 
         $notamedia = $notamedia/mysqli_num_rows($result2);
 
@@ -93,18 +81,7 @@
         
 
         echo "   </tr>";
-
-
       }
-
-        
-
-        
-
-
-
-
-
        }
 
     mysqli_close($db);
@@ -114,6 +91,3 @@
         
     </body>
 </html>
-
-   
-   
