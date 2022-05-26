@@ -62,17 +62,17 @@
         $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE idrestaurante=".$registro['id'] ;
         // echo ($busqueda2);
         $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
-
+        $division = mysqli_num_rows($result2);
         while($registro2 = mysqli_fetch_array($result2)){
 
             $notamedia = $notamedia + $registro2[0];
            // $comentario = $comentario + "/n" + $registro2[1];
             echo ($registro2[1]);
-            $comentario = $comentario;
+            $comentario = $registro2[1];
         }
 
-        $notamedia = $notamedia/mysqli_num_rows($result2);
-        echo (mysqli_num_rows($result2));
+        $notamedia = $notamedia/$division;
+        echo ($division);
 
         echo "   <tr> ";
         echo "   <td width='300'>".$registro['nombre']."</td>";
