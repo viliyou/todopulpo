@@ -72,7 +72,7 @@
         }
 
         $notamedia = $notamedia/mysqli_num_rows($result2);
-        echo (mysqli_nu_rows($result2));
+        echo (mysqli_num_rows($result2));
 
         echo "   <tr> ";
         echo "   <td width='300'>".$registro['nombre']."</td>";
