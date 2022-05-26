@@ -96,10 +96,10 @@
         
          echo "   <tr> ";
         
-         echo "  <form action="do_comment.php" method="post">"
-         echo "  <input name="f_comentario" type="text" placeholder="comentario" />"
-         echo "  <input name="f_nota" type="number" placeholder="nota" />"      
-         echo"   </form> "
+         echo "  <form action="do_comment.php" method="post">";
+         echo "  <input name="f_comentario" type="text" placeholder="comentario" />";
+         echo "  <input name="f_nota" type="number" placeholder="nota" />";      
+         echo"   </form> ";
             
          echo "   </tr>";
             
