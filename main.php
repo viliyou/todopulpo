@@ -83,6 +83,7 @@
         echo "   <tr> ";
         echo "   <td width='300'>".$registro['nombre']."</td>";
         
+        
         echo "   <td width='400'>".$registro['direccion']."</td>";
         echo "   <td width='200'>".$registro['provincia']."</td>";
         echo "   <td width='400'>".$notamedia."</td>";
@@ -90,6 +91,26 @@
         
 
         echo "   </tr>";
+        
+        if (isset($_SESSION['user_id'])) {
+        
+         echo "   <tr> ";
+        
+         echo "  <form action="do_comment.php" method="post">"
+         echo "  <input name="f_comentario" type="text" placeholder="comentario" />"
+         echo "  <input name="f_nota" type="number" placeholder="nota" />"      
+         echo"   </form> "
+            
+         echo "   </tr>";
+            
+        }
+        
+        
+        
+        
+        
+        
+        
         $comentario= "";
       }
        }
