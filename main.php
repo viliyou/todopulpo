@@ -73,6 +73,8 @@
             $division = $division + 1;
             
         }
+        
+        $comentario= "";
 
         $notamedia = $notamedia/$division;
         $notamedia = round($notamedia);
