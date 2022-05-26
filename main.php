@@ -68,7 +68,7 @@
             $notamedia = $notamedia + $registro2[0];
            // $comentario = $comentario + "/n" + $registro2[1];
             echo ($registro2[1]);
-            $comentario = $comentario
+            $comentario = $comentario;
         }
 
         $notamedia = $notamedia/mysqli_num_rows($result2);
