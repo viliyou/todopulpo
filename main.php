@@ -63,12 +63,15 @@
         // echo ($busqueda2);
         $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
         $division = mysqli_num_rows($result2);
+        
         while($registro2 = mysqli_fetch_array($result2)){
 
             $notamedia = $notamedia + $registro2[0];
            // $comentario = $comentario + "/n" + $registro2[1];
             echo ($registro2[1]);
             $comentario = $registro2[1];
+            $division = $division + 1;
+            
         }
 
         $notamedia = $notamedia/$division;
