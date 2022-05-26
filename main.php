@@ -74,7 +74,7 @@
             
         }
         
-        $comentario= "";
+        
 
         $notamedia = $notamedia/$division;
         $notamedia = round($notamedia);
@@ -90,6 +90,7 @@
         
 
         echo "   </tr>";
+        $comentario= "";
       }
        }
 
