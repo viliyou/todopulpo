@@ -67,7 +67,7 @@
         while($registro2 = mysqli_fetch_array($result2)){
 
             $notamedia = $notamedia + $registro2[0];
-           $comentario = $registro2[1].("\n").$comentario ;
+           $comentario = $registro2[1].("+").$comentario ;
             echo ($registro2[1]);
             //$comentario = $registro2[1];
             $division = $division + 1;
