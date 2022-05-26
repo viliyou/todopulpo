@@ -66,8 +66,8 @@
         while($registro2 = mysqli_fetch_array($result2)){
 
             $notamedia = $notamedia + $registro2[0];
-            $comentario = $comentario + "/n" + $registro2[1];
-          
+           // $comentario = $comentario + "/n" + $registro2[1];
+            $comentario = $comentario
         }
 
         $notamedia = $notamedia/mysqli_num_rows($result2);
