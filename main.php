@@ -75,6 +75,7 @@
         }
 
         $notamedia = $notamedia/$division;
+        $notamedia = round($notamedia);
         echo ($division);
 
         echo "   <tr> ";
