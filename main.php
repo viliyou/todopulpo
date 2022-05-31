@@ -115,7 +115,7 @@
         
         $comentario= "";
       }
-       }
+//       }
 
     mysqli_close($db);
 ?>
