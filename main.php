@@ -91,9 +91,10 @@
             echo "  <input type='submit' value='Enviar' />  "; 
             echo"   </form> ";            
             echo "   </tr>";        
-            $comentario= "";
             
-             }   
+            
+             } 
+         $comentario= "";   
         
          }
     }
