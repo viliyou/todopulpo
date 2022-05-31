@@ -85,6 +85,14 @@
         if (isset($_SESSION['user_id'])) {
         
             echo "   <tr> "; 
+            
+            echo " <td> ";
+            echo " </td> ";
+            echo " <td> ";
+            echo " </td> ";
+            echo " <td> ";
+            echo " </td> ";
+            
             echo " <td> ";
             echo "  <form action='do_comment.php' method='post'>";            
             echo "  <input name='f_nota' type='number' placeholder='nota' />"; 
