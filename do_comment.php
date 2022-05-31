@@ -16,7 +16,7 @@ echo ($comentario_posted);
   
 
 
-$query = "INSERT INTO tValoracion(nota, comentario) VALUES ('".$nota_posted."','".$comentario_posted."')";
+$query = "INSERT INTO tValoracion(nota, comentario) VALUES (".$nota_posted.",'".$comentario_posted."')";
 mysqli_query($db, $query) or die('Error');
 //echo '<p>Usuario registrado</p>';
 //echo '<p><a href="login.php">Loguearse</p>';
