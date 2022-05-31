@@ -104,6 +104,8 @@
         // echo"   </form> ";
             
         // echo "   </tr>";
+        
+        $comentario= "";
             
         }
         
@@ -113,7 +115,7 @@
         
         
         
-        $comentario= "";
+        
       }
 //       }
 
