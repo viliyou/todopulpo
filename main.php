@@ -99,8 +99,8 @@
             echo " </td> ";
             echo " <td> ";
             echo "  <input name='f_comentario' type='text' placeholder='comentario' />";
-            echo " </td> ";
-            echo " <td> ";
+            //echo " </td> ";
+            //echo " <td> ";
             echo "  <input type='submit' value='Enviar' />  "; 
             echo"   </form> ";  
             echo " </td> ";
