@@ -9,14 +9,15 @@ $nota_posted = $_POST['f_nota'];
 $comentario_posted = $_POST['f_comentario'];
 
 
-echo ($nota_posted);
-echo ($comentario_posted);
+//echo ($nota_posted);
+//echo ($comentario_posted);
 
 
   
 
 
 $query = "INSERT INTO tValoracion(nota, comentario) VALUES (".$nota_posted.",'".$comentario_posted."')";
+echo ($query);
 mysqli_query($db, $query) or die('Error');
 //echo '<p>Usuario registrado</p>';
 //echo '<p><a href="login.php">Loguearse</p>';
