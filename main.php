@@ -10,7 +10,7 @@
         
     <h1>Página principal</h1>
         
-    <?php        
+<?php        
     session_start();        
     if (empty($_SESSION['user_id'])) {         
     ?>
@@ -41,9 +41,6 @@
 <?php
 
     $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
-
-
-
     //$query = "SELECT tRestaurante.nombre,tRestaurante.direccion,tRestaurante.provincia,tValoracion.nota,tValoracion.comentario FROM tRestaurante JOIN tValoracion ON tRestaurante.id = tValoracion.idrestaurante";
    
     $busqueda1 = "SELECT id,nombre,direccion,provincia FROM tRestaurante";
@@ -57,72 +54,53 @@
 
            if ($results>0){         
 
-    while ($registro = mysqli_fetch_array($result)){
+        while ($registro = mysqli_fetch_array($result)){
 
-        $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE idrestaurante=".$registro['id'] ;
-        // echo ($busqueda2);
-        $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
-        $division = mysqli_num_rows($result2);
+            $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE idrestaurante=".$registro['id'] ;
+            // echo ($busqueda2);
+            $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
+            $division = mysqli_num_rows($result2);
         
-        while($registro2 = mysqli_fetch_array($result2)){
+                while($registro2 = mysqli_fetch_array($result2)){
 
-            $notamedia = $notamedia + $registro2[0];
-           $comentario = $registro2[1]."<br>".$comentario ;
-            //echo ($registro2[1]);
-            //$comentario = $registro2[1];
-            $division = $division + 1;
-            
-        }
-        
-        
+                    $notamedia = $notamedia + $registro2[0];
+                    $comentario = $registro2[1]."<br>".$comentario ;
+                    //echo ($registro2[1]);
+                    //$comentario = $registro2[1];
+                    $division = $division + 1;            
+            }       
 
         $notamedia = $notamedia/$division;
         $notamedia = round($notamedia);
-        echo ($division);
+        //echo ($division);
 
         echo "   <tr> ";
-        echo "   <td width='300'>".$registro['nombre']."</td>";
-        
-        
+        echo "   <td width='300'>".$registro['nombre']."</td>";        
         echo "   <td width='400'>".$registro['direccion']."</td>";
         echo "   <td width='200'>".$registro['provincia']."</td>";
         echo "   <td width='400'>".$notamedia."</td>";
         echo "   <td width='200'>".$comentario."</td>";
-        
-
         echo "   </tr>";
         
         if (isset($_SESSION['user_id'])) {
         
-         echo "   <tr> ";
-        
-         echo "  <form action='do_comment.php' method='post'>";
+            echo "   <tr> ";        
+            echo "  <form action='do_comment.php' method='post'>";            
+            echo "  <input name='f_nota' type='number' placeholder='nota' />";      
+            echo "  <input name='f_comentario' type='text' placeholder='comentario' />";
+            echo "  <input type='submit' value='Enviar' />  "; 
+            echo"   </form> ";            
+            echo "   </tr>";        
+            $comentario= "";
             
-         echo "  <input name='f_nota' type='number' placeholder='nota' />";      
-         echo "  <input name='f_comentario' type='text' placeholder='comentario' />";
-         echo "  <input type='submit' value='Enviar' />  "; 
-         echo"   </form> ";
-            
-         echo "   </tr>";
+             }   
         
-        $comentario= "";
-            
-        }
-        
-        
-        
-        
-        
-        
-        
-        
-      }
-       }
+         }
+    }
 
     mysqli_close($db);
-?>
+ ?>
         </table>
-      </div>
-        
+      </div>        
     </body>
 </html>
