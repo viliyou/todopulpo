@@ -22,7 +22,7 @@ $restaurante_posted =$_POST['f_idrestaurante'];
 
 $query2 = "SELECT nota FROM tValoracion WHERE idrestaurante=".$restaurante_posted;
 $notaactual = mysqli_query($db, $query2) or die('Error');
-  $nota_posted = ($nota_posted + $notaactual)/2;
+  $nota_posted = round(($nota_posted + $notaactual)/2);
 $query = "INSERT INTO tValoracion(idusuario, idrestaurante, nota, comentario) VALUES (".$usuario_posted.",".$restaurante_posted.",".$nota_posted.",'".$comentario_posted."')";
 echo ($query);
 mysqli_query($db, $query) or die('Error');
