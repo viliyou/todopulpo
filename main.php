@@ -74,7 +74,7 @@
             }       
 
         //$notamedia = $notamedia/$division;
-        //$notamedia = round($notamedia);
+        $notamedia = round($notamedia);
         //echo ($division);
 
         echo "   <tr> ";
@@ -90,7 +90,7 @@
             echo "   <tr> "; 
             
             echo " <td> ";
-            echo ($registro['id']);
+            
             
             echo " </td> ";
             echo " <td> ";
