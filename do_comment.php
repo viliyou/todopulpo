@@ -7,6 +7,9 @@ $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
 
 $nota_posted = $_POST['f_nota'];
 $comentario_posted = $_POST['f_comentario'];
+$usuario_posted = $_POST['f_idusuario'];
+$restaurante_posted =$_POST['f_idrestaruante'];
+  
 
 
 //echo ($nota_posted);
@@ -16,7 +19,7 @@ $comentario_posted = $_POST['f_comentario'];
   
 
 
-$query = "INSERT INTO tValoracion(nota, comentario) VALUES (".$nota_posted.",'".$comentario_posted."')";
+$query = "INSERT INTO tValoracion(idusuario, idrestaurante, nota, comentario) VALUES (".$usuario_posted.",".$restaurante_posted.",".$nota_posted.",'".$comentario_posted."')";
 echo ($query);
 mysqli_query($db, $query) or die('Error');
 //echo '<p>Usuario registrado</p>';
