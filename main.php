@@ -103,7 +103,7 @@
             
             echo "  <input name='f_idusuario' type='hidden' value=".$usuario." />";
             
-            echo "  <input name='f_idrestaurante' type='hidden' value=".$registro['id']."/>";
+            echo "  <input name='f_idrestaurante' type='hidden' value=".$registro['id']." />";
             echo "  <input name='f_nota' type='number' placeholder='nota' />"; 
             echo " </td> ";
             echo " <td> ";
