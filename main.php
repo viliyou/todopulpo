@@ -66,7 +66,7 @@
         
                 while($registro2 = mysqli_fetch_array($result2)){
 
-                    //$notamedia = $notamedia + $registro2[0];
+                    $notamedia = $registro2[0];
                     $comentario = $registro2[1]."<br>".$comentario ;
                     //echo ($registro2[1]);
                     //$comentario = $registro2[1];
@@ -81,7 +81,7 @@
         echo "   <td width='300'>".$registro['nombre']."</td>";        
         echo "   <td width='400'>".$registro['direccion']."</td>";
         echo "   <td width='200'>".$registro['provincia']."</td>";
-        echo "   <td width='400'>".$registro2[0]."</td>";
+        echo "   <td width='400'>".$notamedia. "</td>";
         echo "   <td width='200'>".$comentario."</td>";
         echo "   </tr>";
         
