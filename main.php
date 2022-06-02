@@ -60,7 +60,7 @@
         while ($registro = mysqli_fetch_array($result)){
 
             $busqueda2 = "SELECT nota,comentario FROM tValoracion  WHERE idrestaurante=".$registro['id'] ;
-            // echo ($busqueda2);
+             
             $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
             $division = mysqli_num_rows($result2);
         
@@ -90,7 +90,7 @@
             echo "   <tr> "; 
             
             echo " <td> ";
-            
+            echo ($registro['id']);
             
             echo " </td> ";
             echo " <td> ";
@@ -102,6 +102,7 @@
             echo "  <form action='do_comment.php' method='post'>";
             
             echo "  <input name='f_idusuario' type='hidden' value=".$usuario." />";
+            
             echo "  <input name='f_idrestaurante' type='hidden' value=".$registro['id']."/>";
             echo "  <input name='f_nota' type='number' placeholder='nota' />"; 
             echo " </td> ";
