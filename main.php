@@ -12,14 +12,17 @@
         
 <?php        
     session_start();        
-    if (empty($_SESSION['user_id'])) {         
+    if (empty($_SESSION['user_id'])) {
+       
     ?>
         <div class="contenedorLogin">
             <p>No estás logueado <a href='/login.php'> Iniciar Sesión</a>.</p>
         </div>
     <?php
     } else {
+        $usuario = $_SESSION['user_id'];
     ?>
+        
         <div class="main">
             <p>Estás logueado</p>
         </div>        
@@ -87,6 +90,8 @@
             echo "   <tr> "; 
             
             echo " <td> ";
+            
+            
             echo " </td> ";
             echo " <td> ";
             echo " </td> ";
@@ -94,7 +99,10 @@
             echo " </td> ";
             
             echo " <td> ";
-            echo "  <form action='do_comment.php' method='post'>";            
+            echo "  <form action='do_comment.php' method='post'>";
+            
+            echo "  <input name='f_idusuario' type='hidden' value=".$usuario." />";
+            echo "  <input name='f_idrestaurante' type='hidden' value=".$registro['id']."/>";
             echo "  <input name='f_nota' type='number' placeholder='nota' />"; 
             echo " </td> ";
             echo " <td> ";
