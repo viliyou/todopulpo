@@ -8,7 +8,7 @@ $db = mysqli_connect('localhost', 'root', '1234', 'todopulpodb') or die('Fail');
 $nota_posted = $_POST['f_nota'];
 $comentario_posted = $_POST['f_comentario'];
 $usuario_posted = $_POST['f_idusuario'];
-$restaurante_posted =$_POST['f_idrestaruante'];
+$restaurante_posted =$_POST['f_idrestaurante'];
   
 
 
