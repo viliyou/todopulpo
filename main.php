@@ -66,12 +66,12 @@
             
             if ($result2>0){
                 
-                $registro2 = mysqli_fetch_array($result2);
+                //$registro2 = mysqli_fetch_array($result2);
                 
                  $notamedia = ($registro2[0] + $notamedia)/2;
                  $notamedia = round($notamedia);
         
-                //while($registro2 = mysqli_fetch_array($result2)){
+                while($registro2 = mysqli_fetch_array($result2)){
                 
                   
 
@@ -81,7 +81,7 @@
                     //$comentario = $registro2[1];
                     //$division = $division + 1;     
                     
-                    
+                }
              
             }else{
                 
