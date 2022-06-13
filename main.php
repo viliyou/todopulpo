@@ -68,7 +68,12 @@
                 
                 //$registro2 = mysqli_fetch_array($result2);
                 
+                
+                
                  $notamedia = ($registro2[0] + $notamedia)/2;
+                echo $registro2[0];
+                echo $notamedia;
+                
                  $notamedia = round($notamedia);
         
                 while($registro2 = mysqli_fetch_array($result2)){
