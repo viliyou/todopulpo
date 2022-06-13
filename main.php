@@ -74,7 +74,7 @@
                // echo $registro2[0];
                // echo $notamedia;
                 
-                 $notamedia = round($notamedia);
+                 $notamedia =0;
                     $division = 0;
                 while($registro2 = mysqli_fetch_array($result2)){
                     
@@ -90,7 +90,7 @@
                     $division = $division + 1;     
                     
                 }
-                $notamedia = $notamedia/$division;
+                $notamedia = round($notamedia/$division);
                  
              
             }else{
