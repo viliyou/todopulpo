@@ -75,10 +75,10 @@
                // echo $notamedia;
                 
                  $notamedia = round($notamedia);
-        
+                    $division = 0;
                 while($registro2 = mysqli_fetch_array($result2)){
                     
-                    $notamedia = ($registro2[0] + $notamedia)/2;
+                    $notamedia = ($registro2[0] + $notamedia);
                    
                 
                   
@@ -87,10 +87,10 @@
                     $comentario = $registro2[1]."<br>".$comentario ;
                     //echo ($registro2[1]);
                     //$comentario = $registro2[1];
-                    //$division = $division + 1;     
+                    $division = $division + 1;     
                     
                 }
-                
+                $notamedia = $notamedia/$division;
                  
              
             }else{
