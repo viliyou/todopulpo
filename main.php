@@ -63,18 +63,34 @@
              
             $result2 = mysqli_query($db, $busqueda2) or die('Query error 2');        
             $division = mysqli_num_rows($result2);
+            
+            if ($result2>0){
+                
+                $registro2 = mysqli_fetch_array($result2);
+                
+                 $notamedia = ($registro2[0] + $notamedia)/2;
+                 $notamedia = round($notamedia);
         
-                while($registro2 = mysqli_fetch_array($result2)){
+                //while($registro2 = mysqli_fetch_array($result2)){
+                
+                  
 
-                    $notamedia = $registro2[0];
+                   
                     $comentario = $registro2[1]."<br>".$comentario ;
                     //echo ($registro2[1]);
                     //$comentario = $registro2[1];
-                    $division = $division + 1;            
-            }       
+                    //$division = $division + 1;     
+                    
+                    
+             
+            }else{
+                
+                $notamedia = "no existen puntuaciones";
+                $comentario = "no existen comentarios";
+            }
 
         //$notamedia = $notamedia/$division;
-        $notamedia = round($notamedia);
+        
         //echo ($division);
 
         echo "   <tr> ";
