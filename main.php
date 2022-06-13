@@ -78,7 +78,7 @@
         
                 while($registro2 = mysqli_fetch_array($result2)){
                     
-                    $notamedia = ($registro2[0] + $notamedia)/2;
+                   
                 
                   
 
@@ -89,6 +89,8 @@
                     //$division = $division + 1;     
                     
                 }
+                
+                 $notamedia = ($registro2[0] + $notamedia)/2;
              
             }else{
                 
